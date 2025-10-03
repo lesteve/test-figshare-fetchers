@@ -1,0 +1,26 @@
+name: Test Figshare fetchers
+permissions:
+  contents: read
+
+on:
+  push:
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.head_ref || github.run_id }}
+  cancel-in-progress: true
+
+jobs:
+  test-figshare-fetchers:
+    steps:
+      - uses: actions/checkout@v3
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.x"
+
+      - name: Install dependencies
+        run: pip install scikit-learn
+      - name: IP info
+        run: curl ipinfo.io
+      - name: fetch data from Figshare
+        run: python fetch.py
