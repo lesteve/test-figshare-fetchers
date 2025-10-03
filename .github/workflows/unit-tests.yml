@@ -20,7 +20,7 @@ jobs:
           python-version: "3.x"
 
       - name: Install dependencies
-        run: pip install scikit-learn
+        run: pip install scikit-learn pillow
       - name: IP info
         run: curl ipinfo.io
       - name: fetch data from Figshare
