@@ -1,7 +1,7 @@
 from sklearn import datasets
 
 fetcher_names = [
-    each for each in dir(datasets) if each.startswith("fetch_") and not "openml" in each
+    each for each in dir(datasets) if each.startswith("fetch_") and not ("openml" in each or "file" in each)
 ]
 
 for name in fetcher_names:
