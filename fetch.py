@@ -7,3 +7,4 @@ fetcher_names = [
 for name in fetcher_names:
     print(f"{name=}")
     fetcher = getattr(datasets, name)
+    fetcher()
