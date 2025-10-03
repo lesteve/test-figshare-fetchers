@@ -23,5 +23,13 @@ jobs:
         run: pip install scikit-learn pillow
       - name: IP info
         run: curl ipinfo.io
-      - name: fetch data from Figshare
+      - name: fetch data from Figshare 1
+        run: python fetch.py
+      - name: fetch data from Figshare 2
+        run: python fetch.py
+      - name: fetch data from Figshare 3
+        run: python fetch.py
+      - name: fetch data from Figshare 4
+        run: python fetch.py
+      - name: fetch data from Figshare 5
         run: python fetch.py
