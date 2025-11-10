@@ -4,6 +4,8 @@ permissions:
 
 on:
   push:
+  schedule:
+    - cron: "42 * */1 * *"
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.head_ref || github.run_id }}
